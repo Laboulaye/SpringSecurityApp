@@ -9,10 +9,13 @@ import java.util.Set;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "password")
     private String password;
 
     @Transient
@@ -20,9 +23,10 @@ public class User {
 
     @ManyToMany
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
-                                    inverseJoinColumns = @JoinColumn(name = "role_id"))
+            inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles;
 
+    public User(){}
 
     public Long getId() {
         return id;

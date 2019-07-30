@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE logback>
 <configuration>
@@ -8,9 +7,10 @@
         </encoder>
     </appender>
 
-    <logger name="net.proselyte.springsecurityapp">
+    <logger name="com.study.springSecurityApp">
         <level value="debug"/>
     </logger>
+
     <logger name="org.springframework">
         <level value="info"/>
     </logger>

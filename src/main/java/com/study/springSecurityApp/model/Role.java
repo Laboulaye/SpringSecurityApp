@@ -1,6 +1,5 @@
 package com.study.springSecurityApp.model;
 
-import org.springframework.security.core.userdetails.User;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -10,7 +9,7 @@ import java.util.Set;
 public class Role {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name")
